@@ -1,0 +1,10 @@
+name: steam_worker
+description: "Tek bir Steam uygulamasını 'oynuyor' gösteren işçi süreç (dart compile exe ile derlenir) ve Steam oturum katmanı."
+publish_to: 'none'
+version: 2.0.0
+
+environment:
+  sdk: ^3.13.2
+
+dependencies:
+  ffi: ^2.2.0

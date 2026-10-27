@@ -1,0 +1,10 @@
+name: achievements_core
+description: Steam achievement schema + steamclient FFI, shared by the app and the helper process.
+publish_to: none
+version: 1.0.0
+
+environment:
+  sdk: ^3.13.2
+
+dependencies:
+  ffi: ^2.2.0

@@ -1,0 +1,51 @@
+name: play_hub
+description: "Steam toolbox: boost playtime for this PC and other accounts, manage achievements, track hours."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.13.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  window_manager: ^0.5.2
+  tray_manager: ^0.8.0
+  path_provider: ^2.1.6
+  path: ^1.9.1
+  ffi: ^2.2.0
+  flutter_secure_storage: ^9.2.4
+  url_launcher: ^6.3.2
+  qr_flutter: ^4.1.0
+  async: ^2.13.0
+  steam_worker:
+    path: worker
+  achievements_core:
+    path: achievements_core
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/tray/
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
+        - asset: assets/fonts/Poppins-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Poppins-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Poppins-Bold.ttf
+          weight: 700
+    - family: PlexMono
+      fonts:
+        - asset: assets/fonts/IBMPlexMono-Regular.ttf
+        - asset: assets/fonts/IBMPlexMono-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/IBMPlexMono-SemiBold.ttf
+          weight: 600

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#22D3EE"/>
+      <stop offset="0.5" stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#4F2EC9"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.3" cy="0.1" r="0.9">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.45"/>
+      <stop offset="0.55" stop-color="#FFFFFF" stop-opacity="0.04"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="hub" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#DCE6FF"/>
+    </linearGradient>
+    <linearGradient id="node" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#BFD3FF"/>
+    </linearGradient>
+    <filter id="sh" x="-30%" y="-30%" width="160%" height="170%">
+      <feDropShadow dx="0" dy="22" stdDeviation="20" flood-color="#0B1650" flood-opacity="0.5"/>
+    </filter>
+    <clipPath id="sq"><rect width="1024" height="1024" rx="232"/></clipPath>
+  </defs>
+  <g clip-path="url(#sq)">
+    <rect width="1024" height="1024" fill="url(#bg)"/>
+    <rect width="1024" height="1024" fill="url(#glow)"/>
+    <!-- yörünge halkaları -->
+    <circle cx="512" cy="512" r="300" fill="none" stroke="#FFFFFF" stroke-opacity="0.22" stroke-width="5" stroke-dasharray="4 20" stroke-linecap="round"/>
+    <circle cx="512" cy="512" r="420" fill="none" stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="4"/>
+    <!-- bağlantılar -->
+    <g stroke="#FFFFFF" stroke-opacity="0.65" stroke-width="12" stroke-linecap="round">
+      <line x1="512" y1="512" x2="512" y2="212"/>
+      <line x1="512" y1="512" x2="772" y2="662"/>
+      <line x1="512" y1="512" x2="252" y2="662"/>
+    </g>
+    <!-- uydu düğümler -->
+    <g filter="url(#sh)">
+      <circle cx="512" cy="212" r="62" fill="url(#node)"/>
+      <circle cx="772" cy="662" r="62" fill="url(#node)"/>
+      <circle cx="252" cy="662" r="62" fill="url(#node)"/>
+    </g>
+    <g fill="#2563EB" opacity="0.85">
+      <circle cx="512" cy="212" r="22"/><circle cx="772" cy="662" r="22"/><circle cx="252" cy="662" r="22"/>
+    </g>
+    <!-- merkez altıgen + oynat -->
+    <g filter="url(#sh)">
+      <path d="M512 330 L670 421 L670 603 L512 694 L354 603 L354 421 Z" fill="url(#hub)" stroke="#FFFFFF" stroke-width="8" stroke-linejoin="round"/>
+    </g>
+    <path d="M470 440 L470 584 L594 512 Z" fill="#2563EB" stroke="#2563EB" stroke-width="30" stroke-linejoin="round"/>
+    <path d="M470 440 L470 584 L594 512 Z" fill="#3B82F6"/>
+  </g>
+  <rect width="1024" height="1024" rx="232" fill="none" stroke="#FFFFFF" stroke-opacity="0.25" stroke-width="3"/>
+</svg>
